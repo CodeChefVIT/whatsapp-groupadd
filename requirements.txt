@@ -1,0 +1,4 @@
+python==3 or above
+selenium==3.141.0
+selenium-requests==1.3
+gecodriver
