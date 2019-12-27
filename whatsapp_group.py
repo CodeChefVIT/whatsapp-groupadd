@@ -12,8 +12,8 @@ def group_add(name):
     with open('Samples/people.csv','rt')as f:
       data = csv.reader(f)
       for row in data:
-          l.append(row[1])
-    l=["my jio"]
+          if row[1] != "Given Name":
+            l.append(row[1])
     driver = webdriver.Firefox()
     driver.maximize_window()
     r=driver.get('https://web.whatsapp.com/')
