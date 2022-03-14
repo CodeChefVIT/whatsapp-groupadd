@@ -13,7 +13,10 @@ def group_add(name):
       data = csv.reader(f)
       for row in data:
           if row[1] != "Given Name":
-            l.append(row[1])
+              if row[1]:
+                  l.append(row[1])
+    print(l)
+    open('geckodriver.exe','rt')
     driver = webdriver.Firefox()
     driver.maximize_window()
     r=driver.get('https://web.whatsapp.com/')
@@ -24,26 +27,25 @@ def group_add(name):
         print("WhatsApp group doesn't exist")
         print("Please Try again")
         return
-    f = WebDriverWait(driver, 30).until(EC.visibility_of_element_located((By.XPATH,'//*[@class="_3V5x5"]')))
+    f = WebDriverWait(driver, 30).until(EC.visibility_of_element_located((By.XPATH,'//*[@class="_2rlF7"]')))
     f.click()
-    f = WebDriverWait(driver, 30).until(EC.visibility_of_element_located((By.XPATH,'//*[@class="_3p0T6"]')))
+    f = WebDriverWait(driver, 30).until(EC.visibility_of_element_located((By.XPATH,'//*[@class="_3vPI2"]')))
     f.click()
     """
-    driver.find_elements_by_class_name("_3V5x5")[0].click()
+    driver.find_elements_by_class_name("_2rlF7")[0].click()
     time.sleep(25)
-    driver.find_elements_by_class_name("_3p0T6")[0].click()
+    driver.find_elements_by_class_name("_3vPI2")[0].click()
     """
     for i in l :
-        driver.find_element_by_xpath('//*[@title="Search…"]').send_keys(i)
+        driver.find_element_by_xpath('//*[@class="_13NKt copyable-text selectable-text"]').send_keys(i)
         time.sleep(5)
         driver.find_element_by_xpath('//*[@title="{}"]'.format(i)).click()
 
-    driver.find_element_by_xpath('//*[@data-icon="checkmark-light"]').click()
+    driver.find_element_by_xpath('//*[@data-icon="checkmark-medium"]').click()
     time.sleep(5)
-    f = WebDriverWait(driver, 30).until(EC.visibility_of_element_located((By.XPATH,'//*[@class="_2eK7W _3PQ7V"]')))
+    f = WebDriverWait(driver, 30).until(EC.visibility_of_element_located((By.XPATH,'//*[@class="_20C5O _2Zdgs"]')))
     f.click()
     return
 
 name=input("Enter the name of the WhatsApp group you want to add people to")
 group_add(name)
-
