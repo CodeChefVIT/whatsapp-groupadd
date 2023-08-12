@@ -32,7 +32,7 @@ Enter the name of the group you want to add people to
 
 Once you get this screen.
 
-![alt text](https://qphs.fs.quoracdn.net/main-qimg-0b74cd2346cee5cb4551a763d3202abe)
+![alt text](https://github.com/anuragdaksh7/whatsapp-groupadd/assets/84393491/440a1a75-5643-43d1-828a-7f7135a31071)
 
 Open WhatsApp in your device and scan the QR code displayed on the screen.
 
