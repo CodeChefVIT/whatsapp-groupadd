@@ -14,8 +14,7 @@ Gecodriver
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Python.
 
 ```bash
-pip install selenium
-pip install selenium-requests
+pip install -r requirements.txt
 ```
 
 Use the link [geckodriver](https://github.com/mozilla/geckodriver/releases) to install the webdriver.
